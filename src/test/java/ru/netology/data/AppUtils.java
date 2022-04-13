@@ -37,7 +37,7 @@ public class AppUtils {
         var deleteUser = "DELETE FROM users";
         var runner = new QueryRunner();
         try (var conn = DriverManager.getConnection(
-                "jdbc:mysql://localhost:3306/app", "app", "pass")
+                "jdbc:mysql://localhost:3306/app", "user", "pass")
         ) {
             runner.update(conn, deleteCode);
             runner.update(conn, deleteTransactions);
